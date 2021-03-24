@@ -1,15 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 html, body {
     background-color: #001e33;
     color: #dfdfdf;
-    /*
-    font-family: 'Courier Prime', monospace;
-    font-family: 'Merriweather', serif;
-    font-family: 'Open Sans', sans-serif;
-    */
     font-family: 'Ubuntu', sans-serif;
     font-size: large;
     cursor: default;
