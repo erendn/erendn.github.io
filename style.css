@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
 html, body {
     background-color: #001e33;
     color: #dfdfdf;
@@ -40,6 +41,30 @@ h1 {
     }
 }
 
+/* Scrollbar */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+    border-radius: 3px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #004270; 
+    border-radius: 3px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #005996; 
+}
+
+/* Contact page links */
 .social-link {
     width: 50px;
     height: 50px;
@@ -50,11 +75,13 @@ h1 {
     filter: invert(0.5);
 }
 
+/* About Me flags */
 .country-flag {
     height: 30px;
     margin-bottom: 3px;
 }
 
+/* Projects and Publications images */
 .project-image {
     transition: filter 0.4s;
 }
