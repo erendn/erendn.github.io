@@ -4,23 +4,25 @@ function copyToClipboard() {
     /* Create a textarea element to copy the content to the clipboard. */
     var textArea = document.createElement("textarea");
     textArea.value = PUBLIC_KEY;
+
     /* Append the textarea on the page. */
     document.body.appendChild(textArea);
     textArea.select();
     document.execCommand("copy");
+
     /* Remove the textarea from the page. */
     document.body.removeChild(textArea);
+
+    /* Update the tooltip */
     var key = document.getElementById("key");
     key.setAttribute("title", "Copied✔");
-    var tooltip = bootstrap.Tooltip.getInstance(key);
-    tooltip.dispose();
+    bootstrap.Tooltip.getInstance(key).dispose();
     init();
-    tooltip = bootstrap.Tooltip.getInstance(key);
-    tooltip.show();
-    // alert("Public key is copied to the clipboard.");
+    bootstrap.Tooltip.getInstance(key).show();
 }
 
 function init() {
+    /* Enable all tooltips on the page */
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
     var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
         return new bootstrap.Tooltip(tooltipTriggerEl)
