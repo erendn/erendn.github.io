@@ -82,11 +82,21 @@ h1 {
     margin-bottom: 3px;
 }
 
-/* Projects and Publications images */
+/* Projects images */
 .project-image {
-    transition: filter 0.4s;
+    transition: 0.4s;
 }
 
 .project-image:hover {
     filter: brightness(0.7);
+}
+
+/* Publications images */
+.pub-image {
+    filter: invert(1);
+    transition: 0.4s;
+}
+
+.pub-image:hover {
+    filter: invert(0.9);
 }
