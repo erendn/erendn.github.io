@@ -5,42 +5,167 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Eren Dogan</title>
-    <link rel="icon" href="./assets/icons/icon.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
-        crossorigin="anonymous">
+    <link rel="icon" href="./assets/icon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link href="style.css" rel="stylesheet">
-    <link href="cover.css" rel="stylesheet">
-    <script src="scripts/index.js"></script>
+    <script type="module" src="utils.js"></script>
 </head>
 
-<body class="d-flex h-100 text-center text-white" onload="animation()">
+<body onload="last_update()">
 
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-        <header class="mb-auto">
-            <div>
-                <h3 class="float-md-start mb-0"><a href="./index.html">Eren Dogan</a></h3>
-                <nav class="nav nav-masthead justify-content-center float-md-end">
-                    <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
-                    <a class="nav-link" href="./aboutme.html">About Me</a>
-                    <a class="nav-link" href="./assets/Eren-Dogan-Resume.pdf" target="blank">Resume</a>
-                    <a class="nav-link" href="./projects.html">Projects</a>
-                    <a class="nav-link" href="./publications.html">Publications</a>
-                    <a class="nav-link" href="./contact.html">Contact</a>
-                </nav>
+    <div id="column-holder" class="d-flex flex-column py-2 mx-auto">
+        <div id="content-container" class="p-2 pt-5">
+            <div class="row">
+                <div class="col-8">
+
+                    <!-- TITLE -->
+                    <h1 style="font-size: 60px;">Eren Dogan</h1>
+                    <p>
+                        Undergraduate Student
+                        <br>
+                        Computer Science
+                        <br>
+                        <a href="https://www.ozyegin.edu.tr/en">Ozyegin University</a>
+                        <br>
+                        <a href="mailto:eren.dogan@ozu.edu.tr">eren.dogan@ozu.edu.tr</a>
+                    </p>
+
+                </div>
+
+                <div class="col-4">
+
+                </div>
+
             </div>
-        </header>
 
-        <main class="px-3 mb-auto">
-            <h1 class="display-3">👋🏻</h1>
-            </br>
-            </br>
-            <h1 class="display-3" id="greetings"></h1>
-            </br>
-            </br>
-        </main>
+            <hr>
+
+            <div class="d-flex justify-content-around">
+                <!-- <a href="mailto:eren.dogan@ozu.edu.tr">E-mail</a> -->
+                <a href="assets/Eren-Dogan-Resume.pdf">Resume</a>
+                <a href="https://scholar.google.com/citations?user=w3pdIrkAAAAJ&hl=en">Google Scholar</a>
+                <a href="https://www.linkedin.com/in/erendogann/">LinkedIn</a>
+                <a href="https://github.com/erendo">GitHub</a>
+            </div>
+
+            <hr>
+
+            <p>
+                I am a senior Computer Science student at Ozyegin University in Turkey. I
+                am interested in computer architecture and other related areas.
+            </p>
+
+            <hr>
+
+            <!-- PUBLICATIONS -->
+            <h2>Publications</h2>
+            <p>
+                <b>An Automated Flow for PyTorch Model Compression and Deployment on Microcontrollers</b>
+                <br>
+                Eren Dogan, <a href="http://ugurdag.com/">H. Fatih Ugurdag</a>, <a href="https://www.linkedin.com/in/hasanunlu/">Hasan Unlu</a>
+                <br>
+                <i>International Conference on VLSI Design held jointly with International Conference
+                    on Embedded Systems Design (VLSID), 2022</i>
+                <br>
+                <a href="https://arxiv.org/abs/2103.15972">arXiv</a>
+                <a href="https://github.com/VLSIDA/OpenCache">repo</a>
+            </p>
+            <p>
+                <b>OpenCache: An Open-Source OpenRAM Based Cache Generator</b>
+                <br>
+                Eren Dogan, <a href="http://ugurdag.com/">H. Fatih Ugurdag</a>, <a href="http://gutha.us/">Matthew Guthaus</a>
+                <br>
+                <i>Workshop on Open-Source EDA Technology (WOSET), at International Conference on
+                    Computer-Aided Design (ICCAD), 2021</i>
+                <br>
+                <a href="https://woset-workshop.github.io/PDFs/2021/a21.pdf">PDF</a>
+            </p>
+
+            <hr>
+
+            <!-- HOBBY PROJECTS -->
+            <h2>Hobby Projects</h2>
+            <p>
+                <b>Image Processor JS</b>
+                <br>
+                I implemented a simulator with some image processing algorithms in JavaScript.
+                <br>
+                <a href="https://erendo.github.io/image-processor-js/">demo</a>
+                <a href="https://github.com/erendo/image-processor-js">repo</a>
+            </p>
+            <p>
+                <b>Pathfinder JS</b>
+                <br>
+                I implemented a simulator with some pathfinding algorithms in JavaScript.
+                <br>
+                <a href="https://erendo.github.io/pathfinder-js/">demo</a>
+                <a href="https://github.com/erendo/pathfinder-js">repo</a>
+            </p>
+            <p>
+                <b>OutRun JS</b>
+                <br>
+                I designed a simulator with pseudo-3D game engine for the arcade game
+                <a href="https://en.wikipedia.org/wiki/Out_Run#:~:text=Sega%20OutRun,motion%20simulator%20deluxe%20arcade%20cabinet.">Out Run</a>
+                in JavaScript.
+                <br>
+                <a href="https://erendo.github.io/outrun-js/">demo</a>
+                <a href="https://github.com/erendo/outrun-js">repo</a>
+            </p>
+            <p>
+                <b>Simple Games</b>
+                <br>
+                I wrote many simple games in Java during my freshman year at Ozyegin University.
+                <br>
+                <a href="https://github.com/erendo/chess-java">chess</a>
+                <a href="https://github.com/erendo/klondike-java">klondike</a>
+                <a href="https://github.com/erendo/tetris-java">tetris</a>
+                <a href="https://github.com/erendo/snake-java">snake</a>
+                <a href="https://github.com/erendo/minesweeper-java">minesweeper</a>
+                <a href="https://github.com/erendo/pacman-java">pacman</a>
+                <a href="https://github.com/erendo/uno-java">uno</a>
+                <a href="https://github.com/erendo/monopoly-java">monopoly</a>
+            </p>
+
+            <hr>
+
+            <!-- PERSONAL -->
+            <h2>Personal</h2>
+            <p>
+                I am a German-Turk (<a href="https://en.wikipedia.org/wiki/Turks_in_Germany">Deutschtürke</a>),
+                born in <a href="https://en.wikipedia.org/wiki/Nordenham">Nordenham</a> and
+                raised in <a href="https://en.wikipedia.org/wiki/Mersin">Mersin</a>.
+            </p>
+            <p>
+                I enjoy automating things; therefore, I usually <span title="find me everywhere as biarmic">play</span> simulation/automation games.
+                That's probably why I am interested in electronic design automation as well.
+            </p>
+
+            <hr>
+
+            <p id="update" style="text-align: center; color: rgb(114, 114, 114);"></p>
+
+        </div>
     </div>
+
+    <script type="module">
+        import { Octokit } from "https://cdn.skypack.dev/@octokit/rest";
+
+        async function last_update() {
+            // Get the last commit on this repo
+            const octokit = new Octokit();
+            var commit = await octokit.request("GET /repos/erendo/erendo.github.io/commits/main");
+            // Get the date of the last commit
+            var date_str = commit.data.commit.committer.date;
+            // Convert the date string to American date format
+            var date = new Date(date_str);
+            var us_date_str = date.toLocaleDateString("en-US", { year: 'numeric', month: 'long', day: 'numeric' });
+            // Set the text in the document
+            document.getElementById("update").innerText = "Last updated on " + us_date_str;
+        }
+
+        // last_update();
+    </script>
 
 </body>
 
