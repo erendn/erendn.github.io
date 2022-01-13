@@ -12,7 +12,7 @@
     <script type="module" src="utils.js"></script>
 </head>
 
-<body onload="last_update()">
+<body>
 
     <div id="column-holder" class="d-flex flex-column py-2 mx-auto">
         <div id="content-container" class="p-2 pt-5">
@@ -34,7 +34,7 @@
                 </div>
 
                 <div class="col-4">
-
+                    <!-- Add photo here -->
                 </div>
 
             </div>
@@ -42,7 +42,6 @@
             <hr>
 
             <div class="d-flex justify-content-around">
-                <!-- <a href="mailto:eren.dogan@ozu.edu.tr">E-mail</a> -->
                 <a href="assets/Eren-Dogan-Resume.pdf">Resume</a>
                 <a href="https://scholar.google.com/citations?user=w3pdIrkAAAAJ&hl=en">Google Scholar</a>
                 <a href="https://www.linkedin.com/in/erendogann/">LinkedIn</a>
@@ -147,25 +146,6 @@
 
         </div>
     </div>
-
-    <script type="module">
-        import { Octokit } from "https://cdn.skypack.dev/@octokit/rest";
-
-        async function last_update() {
-            // Get the last commit on this repo
-            const octokit = new Octokit();
-            var commit = await octokit.request("GET /repos/erendo/erendo.github.io/commits/main");
-            // Get the date of the last commit
-            var date_str = commit.data.commit.committer.date;
-            // Convert the date string to American date format
-            var date = new Date(date_str);
-            var us_date_str = date.toLocaleDateString("en-US", { year: 'numeric', month: 'long', day: 'numeric' });
-            // Set the text in the document
-            document.getElementById("update").innerText = "Last updated on " + us_date_str;
-        }
-
-        // last_update();
-    </script>
 
 </body>
 

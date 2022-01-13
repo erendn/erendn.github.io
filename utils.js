@@ -12,3 +12,6 @@ async function last_update() {
     // Set the text in the document
     document.getElementById("update").innerText = "Last updated on " + us_date_str;
 }
+
+// Run the function after document is loaded
+document.addEventListener("DOMContentLoaded", last_update);
