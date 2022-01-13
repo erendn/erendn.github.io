@@ -21,6 +21,7 @@ body {
 }
 
 h1, h2 {
+    cursor: default;
     color: rgb(233, 214, 153);
     font-family: "Playfair Display", serif;
     font-weight: 700;
@@ -37,6 +38,7 @@ img {
 }
 
 p {
+    cursor: default;
     font-size: 20px;
 }
 
