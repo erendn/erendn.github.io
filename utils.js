@@ -1,16 +1,28 @@
 import { Octokit } from "https://cdn.skypack.dev/@octokit/rest";
 
 async function last_update() {
+    // Get the element of the document
+    var doc_element = document.getElementById("update");
     // Get the last commit on this repo
     const octokit = new Octokit();
-    var commit = await octokit.request("GET /repos/erendo/erendo.github.io/commits/main");
+    var file = "index.html";
+    if (doc_element.nodeName != "en") {
+        file = doc_element.nodeName + "/" + file;
+    }
+    var commit = await octokit.request("GET /repos/erendo/erendo.github.io/commits/main?path=" + file)[0];
     // Get the date of the last commit
-    var date_str = commit.data.commit.committer.date;
-    // Convert the date string to American date format
-    var date = new Date(date_str);
-    var us_date_str = date.toLocaleDateString("en-US", { year: 'numeric', month: 'long', day: 'numeric' });
+    var date = new Date(commit.data.commit.committer.date);
+    // Convert the date string to correct format
+    var str = ""
+    if (doc_element.nodeName == "en") { // American English
+        var date_str = date.toLocaleDateString("en-US", { year: 'numeric', month: 'long', day: 'numeric' });
+        str = "Last updated on " + date_str;
+    } else if (doc_element.nodeName == "tr") { // Turkish
+        var date_str = date.toLocaleDateString("tr-TR", { year: 'numeric', month: 'long', day: 'numeric' });
+        str = "En son " + date_str + " tarihinde güncellendi";
+    }
     // Set the text in the document
-    document.getElementById("update").innerText = "Last updated on " + us_date_str;
+    doc_element.innerText = str;
 }
 
 // Run the function after document is loaded
