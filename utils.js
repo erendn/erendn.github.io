@@ -1,4 +1,4 @@
-import { Octokit } from "https://cdn.skypack.dev/@octokit/rest";
+import { Octokit } from "https://cdn.skypack.dev/@octokit/rest.js";
 
 async function last_update() {
     // Get the element of the document
@@ -9,8 +9,7 @@ async function last_update() {
     if (doc_element.nodeName != "en") {
         file = doc_element.nodeName + "/" + file;
     }
-    var commits = await octokit.request("GET /repos/erendo/erendo.github.io/commits/main?path=" + file);
-    var commit = commits[0];
+    var commit = await octokit.request("GET /repos/erendo/erendo.github.io/commits/main?path=" + file);
     // Get the date of the last commit
     var date = new Date(commit.data.commit.committer.date);
     // Convert the date string to correct format
