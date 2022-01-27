@@ -1,4 +1,4 @@
-import { Octokit } from "https://cdn.skypack.dev/@octokit/rest.js";
+import { Octokit } from "https://cdn.skypack.dev/@octokit/rest";
 
 async function last_update() {
     // Get the element of the document
