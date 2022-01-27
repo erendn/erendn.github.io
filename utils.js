@@ -9,7 +9,8 @@ async function last_update() {
     if (doc_element.nodeName != "en") {
         file = doc_element.nodeName + "/" + file;
     }
-    var commit = await octokit.request("GET /repos/erendo/erendo.github.io/commits/main?path=" + file)[0];
+    var commits = await octokit.request("GET /repos/erendo/erendo.github.io/commits/main?path=" + file);
+    var commit = commits[0];
     // Get the date of the last commit
     var date = new Date(commit.data.commit.committer.date);
     // Convert the date string to correct format
