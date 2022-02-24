@@ -3,7 +3,7 @@ import { Octokit } from "https://cdn.skypack.dev/@octokit/rest";
 async function last_update() {
     // Get the last commit on this repo
     const octokit = new Octokit();
-    var commit = await octokit.request("GET /repos/erendo/erendo.github.io/commits/main");
+    var commit = await octokit.request("GET /repos/erendn/erendn.github.io/commits/main");
     // Get the date of the last commit
     var date_str = commit.data.commit.committer.date;
     // Convert the date string to American date format

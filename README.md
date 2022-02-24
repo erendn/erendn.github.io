@@ -1,1 +1,1 @@
-Repository for my personal [website](https://erendo.github.io/).
+Repository for my personal [website](https://erendn.github.io/).
