@@ -55,3 +55,9 @@ a:hover {
 span {
     text-decoration: underline dotted;
 }
+
+.profile {
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(233, 214, 153);
+}
