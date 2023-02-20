@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@font-face {
+    font-family: "Kultigin";
+    src: url("./assets/Kultigin.ttf");
+}
 
 * {
     font-family: "Open Sans", sans-serif;
@@ -64,4 +68,10 @@ span {
     border-style: solid;
     border-width: 2px;
     border-color: rgb(233, 214, 153);
+}
+
+#background-text {
+    font-family: "Kultigin";
+    overflow-wrap: break-word;
+    overflow: hidden;
 }

@@ -15,3 +15,27 @@ async function last_update() {
 
 // Run the function after document is loaded
 document.addEventListener("DOMContentLoaded", last_update);
+
+
+
+async function generate_background() {
+    // Read the content of the text file
+    const res = await fetch("./assets/orkhon.txt");
+    const data = await res.blob();
+    const text = await data.text();
+    // Process the text here
+    var newText = ""
+    for (var i = 0; i < text.length; ++i) {
+        const char = text[i];
+        if (/\s/g.test(char) == false) {
+            newText += char;
+        }
+    }
+    // Add to the DOM
+    const contDiv = document.getElementById("background-container");
+    const textDiv = document.getElementById("background-text");
+    textDiv.innerText = newText;
+    contDiv.style.height = contDiv.parentElement.clientHeight + "px";
+}
+// Run the function after document is loaded
+document.addEventListener("DOMContentLoaded", generate_background);
