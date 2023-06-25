@@ -51,6 +51,7 @@ p {
 a {
     color: rgb(207, 179, 85);
     text-decoration: none;
+    margin-right: 0.3vw;
 }
 
 a:hover {
