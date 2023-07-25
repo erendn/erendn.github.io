@@ -1,4 +1,4 @@
-import { Octokit } from "https://cdn.skypack.dev/@octokit/rest";
+import { Octokit } from "https://esm.sh/octokit";
 
 async function last_update() {
     // Get the last commit on this repo
