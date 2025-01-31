@@ -38,4 +38,4 @@ async function generate_background() {
     contDiv.style.height = contDiv.parentElement.clientHeight + "px";
 }
 // Run the function after document is loaded
-document.addEventListener("DOMContentLoaded", generate_background);
+//document.addEventListener("DOMContentLoaded", generate_background);
