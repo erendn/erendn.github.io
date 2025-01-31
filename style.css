@@ -26,11 +26,15 @@ body {
     }
 }
 
+.regular-font-size {
+    font-size: 17.5px;
+}
+
 h1, h2 {
     cursor: default;
     color: rgb(233, 214, 153);
     font-family: "Playfair Display", serif;
-    font-weight: 700;
+    font-weight: 900;
 }
 
 hr {
@@ -43,17 +47,38 @@ img {
     object-fit: contain;
 }
 
-p {
+p, .content {
     cursor: default;
+    font-size: 17.5px;
+    margin-bottom: 1rem;
+}
+
+b {
     font-size: 20px;
 }
 
-a {
+details {
+    cursor: default;
+    font-size: 15px;
+    font-style: italic;
+}
+
+summary {
+    font-size: 17.5px;
+    font-style: normal;
+    width: fit-content;
+}
+
+.details-title {
+    width: fit-content;
+}
+
+a, summary {
     color: rgb(207, 179, 85);
     text-decoration: none;
 }
 
-a:hover {
+a:hover, summary:hover {
     color: rgb(13, 20, 12);
     background-color: rgb(207, 179, 85);
 }
@@ -62,7 +87,7 @@ a:hover {
     margin-right: 0.3vw;
 }
 
-span {
+.hovered-span {
     text-decoration: underline dotted;
 }
 
